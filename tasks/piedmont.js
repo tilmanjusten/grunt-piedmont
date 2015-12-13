@@ -1,12 +1,7 @@
-/*
- * grunt-piedmont
- * 
- *
- * Copyright (c) 2015 Tilman Justen <info@tilmanjusten.de>
- * Licensed under the MIT license.
- */
-
 'use strict';
+
+var piedmont = require('piedmont'),
+    process = require('process');
 
 module.exports = function (grunt) {
 
@@ -14,38 +9,24 @@ module.exports = function (grunt) {
   // creation: http://gruntjs.com/creating-tasks
 
   grunt.registerMultiTask('piedmont', 'Generate a Living Styleguide based on a Frontend Prototype', function () {
-
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
-      punctuation: '.',
-      separator: ', '
-    });
+        dest: './styling-guidelines',
+        src: './dist',
+        styles: './src/sass/**/*.scss',
+        tmp: '.tmp/styleguide'
+      }),
+      done = this.async();
 
-    // Iterate over all specified file groups.
-    this.files.forEach(function (file) {
-      // Concat specified files.
-      var src = file.src.filter(function (filepath) {
-        // Warn on and remove invalid source files (if nonull was set).
-        if (!grunt.file.exists(filepath)) {
-          grunt.log.warn('Source file "' + filepath + '" not found.');
-          return false;
-        } else {
-          return true;
-        }
-      }).map(function (filepath) {
-        // Read file source.
-        return grunt.file.read(filepath);
-      }).join(grunt.util.normalizelf(options.separator));
+    piedmont({
+      cwd: process.cwd(),
+      dest: options.dest,
+      src: options.src,
+      styles: options.styles,
+      tmp: options.tmp
+    }, done);
 
-      // Handle options.
-      src += options.punctuation;
-
-      // Write the destination file.
-      grunt.file.write(file.dest, src);
-
-      // Print a success message.
-      grunt.log.writeln('File "' + file.dest + '" created.');
-    });
+    grunt.log.writeln('Waiting for the files to be written...');
   });
 
 };

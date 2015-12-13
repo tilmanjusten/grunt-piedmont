@@ -1,11 +1,3 @@
-/*
- * grunt-piedmont
- * 
- *
- * Copyright (c) 2015 Tilman Justen <info@tilmanjusten.de>
- * Licensed under the MIT license.
- */
-
 'use strict';
 
 module.exports = function (grunt) {
