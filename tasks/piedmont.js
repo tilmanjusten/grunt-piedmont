@@ -13,7 +13,7 @@ module.exports = function (grunt) {
     var options = this.options({
         dest: './styling-guidelines',
         src: './dist',
-        styles: './src/sass/**/*.scss',
+        styles: './src/sass',
         tmp: '.tmp/styleguide'
       }),
       done = this.async();
