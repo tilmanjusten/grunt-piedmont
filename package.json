@@ -28,6 +28,6 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "piedmont": "0.0.2"
+    "piedmont": "0.0.3"
   }
 }
