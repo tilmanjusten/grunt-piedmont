@@ -43,6 +43,15 @@ Default value: `'./styling-guidelines'`
 
 Destination path of the generated living styleguide.
 
+### `docs`
+Type: `String`
+Default value: `./test/fixtures/docs`
+
+Source path of markdown files that will be parsed and converted to content pages. Piedmont uses a 
+[glob pattern](https://www.npmjs.com/package/glob) to get the files: `./test/fixtures/docs/*.md`.
+
+[Documents section for further details.](https://github.com/tilmanjusten/piedmont#documents)
+
 #### `options.src`
 Type: `String`
 Default value: `'./dist'`
@@ -70,7 +79,9 @@ See the [Piedmont documentation for further details about the component inventor
 
 See the [Piedmont documentation for further details about the styleguide](https://github.com/tilmanjusten/piedmont#styleguide).
 
+## Documents
 
+See the [Piedmont documentation for further details about the documentation pages](https://github.com/tilmanjusten/piedmont#documents).
 
 ## Release History
 _(Nothing yet)_
