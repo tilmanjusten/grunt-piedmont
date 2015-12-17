@@ -43,7 +43,7 @@ Default value: `'./styling-guidelines'`
 
 Destination path of the generated living styleguide.
 
-### `docs`
+#### `options.docs`
 Type: `String`
 Default value: `./test/fixtures/docs`
 
