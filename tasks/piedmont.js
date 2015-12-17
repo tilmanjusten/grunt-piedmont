@@ -12,6 +12,7 @@ module.exports = function (grunt) {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
         dest: './styling-guidelines',
+        docs: './docs',
         src: './dist',
         styles: './src/sass',
         tmp: '.tmp/styleguide'
@@ -21,6 +22,7 @@ module.exports = function (grunt) {
     piedmont({
       cwd: process.cwd(),
       dest: options.dest,
+      docs: options.docs,
       src: options.src,
       styles: options.styles,
       tmp: options.tmp
