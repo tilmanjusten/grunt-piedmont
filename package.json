@@ -1,6 +1,6 @@
 {
   "name": "grunt-piedmont",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generate a Living Styleguide based on a Frontend Prototype",
   "repository": "",
   "author": {
