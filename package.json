@@ -2,7 +2,10 @@
   "name": "grunt-piedmont",
   "version": "0.1.1",
   "description": "Generate a Living Styleguide based on a Frontend Prototype",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tilmanjusten/grunt-piedmont"
+  },
   "author": {
     "name": "Tilman Justen",
     "email": "info@tilmanjusten.de",
