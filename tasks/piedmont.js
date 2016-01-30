@@ -30,5 +30,4 @@ module.exports = function (grunt) {
 
     grunt.log.writeln('Waiting for the files to be written...');
   });
-
 };
