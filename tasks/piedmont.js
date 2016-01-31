@@ -1,7 +1,7 @@
 'use strict';
 
 var piedmont = require('piedmont'),
-    process = require('process');
+  process = require('process');
 
 module.exports = function (grunt) {
 
