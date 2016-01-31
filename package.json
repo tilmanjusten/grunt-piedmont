@@ -31,6 +31,6 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "piedmont": "0.1.0"
+    "piedmont": "0.1.1"
   }
 }
