@@ -1,7 +1,7 @@
 'use strict';
 
-var piedmont = require('piedmont'),
-  process = require('process');
+var piedmont = require('piedmont');
+var process = require('process');
 
 module.exports = function (grunt) {
 
@@ -16,8 +16,8 @@ module.exports = function (grunt) {
         src: './dist',
         styles: './src/sass',
         tmp: '.tmp/styleguide'
-      }),
-      done = this.async();
+      });
+    var done = this.async();
 
     piedmont({
       cwd: process.cwd(),
